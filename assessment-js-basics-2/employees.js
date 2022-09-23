@@ -20,7 +20,15 @@
 */
 
 //CODE HERE
-
+class Employee {
+    constructor(name, shifts) {
+        this.name = name;
+        this.shifts = shifts;
+    }
+    getSchedule () {
+        return console.log(`${this.name} works on ${this.shifts}`);        
+    }
+}
 
 
 /*
@@ -35,12 +43,16 @@
 
 //CODE HERE
 
+empOne = new Employee ("Greg","weekdays");
+console.log(empOne);
+
 /*
     Call the `getSchedule` method on the
     `empOne` object.
 */
 
 //CODE HERE
+console.log(empOne.getSchedule(empOne));
 
 
 /*
@@ -56,8 +68,11 @@
 */
 
 //CODE HERE
-
-
+const empTwo = {...empOne};
+console.log(empTwo);
+empTwo[`name`] = `Nick`;
+console.log(empTwo);
+ 
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -83,7 +98,11 @@
 */
 
 //CODE HERE
+class Manger extends Employee {
+    constructor(names, shifts, ) {
 
+    }
+}
 
 
 /*

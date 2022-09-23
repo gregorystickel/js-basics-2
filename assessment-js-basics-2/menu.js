@@ -122,7 +122,7 @@ const foodArr = [{name: `baked ziti`, price: 20, category: "entree", popularity:
 
 //CODE HERE
 function searchTag (input) {
-    let newArray = foodArr.filter( (pizzaObj) => pizzaObj[`tags`] === input );
+    let newArray = foodArr.filter( (pizzaObj) => pizzaObj[`tags`][0] === input );
     return newArray;
 }
 

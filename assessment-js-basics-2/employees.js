@@ -124,7 +124,7 @@ class Manager extends Employee {
 */
 
 //CODE HERE
-manager = new Manager (`John`, `Weekends`, [`Tim`, `Joe`]);
+let manager = new Manager (`John`, `Weekends`, [`Tim`, `Joe`]);
 console.log(manager);
 
 /*
@@ -133,7 +133,7 @@ console.log(manager);
 */
 
 //CODE HERE
-console.log(manager.getEmployees());
+manager.getEmployees();
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -151,4 +151,4 @@ console.log(manager.employees);
 */
 
 //CODE HERE
-console.log(manager.getEmployees());
+manager.getEmployees();

@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+let pizza = {
+    name: "Cheese",
+    price: 10,
+    category: "entree",
+    popularity: 90,
+    rating: 100,
+    tags: ["gluten free", "kids","sunday"]
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,6 +50,10 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity);
+console.log(pizza.name);
+console.log(pizza.rating);
+
 
 
 /*
@@ -53,6 +64,7 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1]);
 
 
 /*
@@ -63,6 +75,8 @@
 */
 
 //CODE HERE
+let pizzaPrice = pizza.price;
+console.log(pizzaPrice);
 
 
 /*
@@ -73,6 +87,8 @@
 */
 
 //CODE HERE
+let pizzaCat = pizza.category;
+console.log(pizzaCat);
 
 
 //////////////////PROBLEM 3////////////////////
@@ -88,8 +104,13 @@
 */
 
 //CODE HERE
-
-
+let foodArr = []
+foodArr[0] = {name: `baked ziti`, price: 20, category: "entree", popularity: 50, rating: 80, tags: ["breakfast", "adults", "monday"] };
+//console.log(foodArr);
+foodArr[1] = {name: `chicken`, price: 10, category: "entree", popularity: 80, rating: 80, tags: ["lunch", "adults", "Tuesday"] };
+//console.log(foodArr);
+foodArr[2] = {name: `steak`, price: 20, category: "entree", popularity: 50, rating: 70, tags: ["dinner", "adults", "monday"] };
+//console.log(foodArr);
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -103,9 +124,12 @@
     your food objects has.
 */
 
-//CODE HERE
+//CODE HERe
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+let newArr = foodArr.map(elem).filter(obj => obj[`tags`] === "dinner");
+console.log(newArr);
+console.log(foodArr[`tags`]);
 
 
 

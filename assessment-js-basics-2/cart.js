@@ -34,6 +34,8 @@ const cart = [
 ]
 
 //CODE HERE
+let newArr = cart.reduce((prev, curr) => prev + curr);
+console.log(newArr);
 
 // const summedPrice = cart.reduce(/* CALLBACK HERE */)
 
@@ -54,6 +56,12 @@ const cart = [
 */
 
 //CODE HERE
+function calcFinalPrice (cartTotal, couponValue, tax) {
+    let newWithtax = cartTotal * (tax + 1) //Caculate tax
+    return newWithtax - couponValue;
+} 
+
+console.log(calcFinalPrice(100, 10, .06));
 
 
 
@@ -79,6 +87,11 @@ const cart = [
 
 /*
     TEXT ANSWER HERE
+class customer object has properties name, email, phone, total, itemscount
+name= string why track customers name
+email = string why track email
+total = number why need total for cart
+itemcount = number why need items in cart 
 
 */
 
@@ -88,3 +101,16 @@ const cart = [
 */
 
 //CODE HERE
+class customer {
+    constructor(name, email, phone, total, itemCount) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.total = total;
+        this.itemCount = itemCount;
+    }
+}
+
+let customer1 = new customer ("Greg","gregory.stickel@live.com", "6092761230", 20, 10);
+
+console.log(customer1);

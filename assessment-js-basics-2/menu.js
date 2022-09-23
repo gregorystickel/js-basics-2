@@ -104,13 +104,9 @@ console.log(pizzaCat);
 */
 
 //CODE HERE
-let foodArr = []
-foodArr[0] = {name: `baked ziti`, price: 20, category: "entree", popularity: 50, rating: 80, tags: ["breakfast", "adults", "monday"] };
-//console.log(foodArr);
-foodArr[1] = {name: `chicken`, price: 10, category: "entree", popularity: 80, rating: 80, tags: ["lunch", "adults", "Tuesday"] };
-//console.log(foodArr);
-foodArr[2] = {name: `steak`, price: 20, category: "entree", popularity: 50, rating: 70, tags: ["dinner", "adults", "monday"] };
-//console.log(foodArr);
+
+const foodArr = [{name: `baked ziti`, price: 20, category: "entree", popularity: 50, rating: 80, tags: ["breakfast", "adults", "monday"] }, {name: `chicken`, price: 10, category: "entree", popularity: 80, rating: 80, tags: ["lunch", "adults", "Tuesday"] }, {name: `steak`, price: 20, category: "entree", popularity: 50, rating: 70, tags: ["dinner", "adults", "monday"] }];
+
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -124,12 +120,13 @@ foodArr[2] = {name: `steak`, price: 20, category: "entree", popularity: 50, rati
     your food objects has.
 */
 
-//CODE HERe
+//CODE HERE
+function searchTag (input) {
+    let newArray = foodArr.filter( (pizzaObj) => pizzaObj[`tags`] === input );
+    return newArray;
+}
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-let newArr = foodArr.map(elem).filter(obj => obj[`tags`] === "dinner");
-console.log(newArr);
-console.log(foodArr[`tags`]);
+console.log(searchTag("lunch"));
 
 
 
@@ -173,6 +170,18 @@ console.log(foodArr[`tags`]);
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+   let filteredArray = [];
+   if (type === `above`) {
+       filteredArray = foodArr.filter( (pizzaObj) => pizzaObj[property] > number); 
+   } else {
+    filteredArray = foodArr.filter( (pizzaObj) => pizzaObj[property] < number); 
+   }
+   return filteredArray;
+} 
+
+console.log(filterByProperty("price",10,"above"));
+
 
 
 /*

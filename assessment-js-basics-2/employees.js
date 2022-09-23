@@ -98,9 +98,16 @@ console.log(empTwo);
 */
 
 //CODE HERE
-class Manger extends Employee {
-    constructor(names, shifts, ) {
-
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+        super(name, shifts);
+        this.employees = employees;
+    }
+    getEmployees () {
+        console.log(`${this.name} manages ${this.employees}`);
+    }
+    addEmployee (emp) {
+        return this.employees.push(emp);
     }
 }
 
@@ -117,7 +124,8 @@ class Manger extends Employee {
 */
 
 //CODE HERE
-
+manager = new Manager (`John`, `Weekends`, [`Tim`, `Joe`]);
+console.log(manager);
 
 /*
     Call the `getEmployees` method on the
@@ -125,7 +133,7 @@ class Manger extends Employee {
 */
 
 //CODE HERE
-
+console.log(manager.getEmployees());
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -133,6 +141,8 @@ class Manger extends Employee {
 */
 
 //CODE HERE 
+manager.addEmployee(`Jane`);
+console.log(manager.employees);
 
 /*
     Call the `getEmployees` method on the
@@ -141,3 +151,4 @@ class Manger extends Employee {
 */
 
 //CODE HERE
+console.log(manager.getEmployees());

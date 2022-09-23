@@ -192,3 +192,5 @@ console.log(filterByProperty("price",10,"above"));
 */
 
 //CODE HERE
+let results = filterByProperty("price",10,"above");
+console.log(results);
